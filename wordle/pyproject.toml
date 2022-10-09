@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "wordle"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "wordle", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+quart = "^0.18.2"
+english-words = "^1.1.0"
+quart-schema = "^0.14.1"
+databases = "^0.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+init_db = "wordle:init_db"
+start = "wordle:run"
